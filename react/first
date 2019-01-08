@@ -1,4 +1,10 @@
 -master react fundamentals
+class app
+{
+state{};!data to display
+render()
+{
+};!ui to show
 -build resuable components
 -render data
 -handle events
