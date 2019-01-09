@@ -6,6 +6,25 @@ render()
 {
 };!ui to show
 -build resuable components
+className instead class
 -render data
 -handle events
 -debug your react apps
+
+arrays.map()
+遍历每一个数组中的数字
+js: && 返回最后一个参数
+bind:http://www.webhek.com/post/javascript-bind.html
+
+-composing components
+1.pass data: using props
+2.raise and handle events
+3.multiple components in sync
+4.functional components
+5.lifecycle hooks
+mount:（render, constructor, componentDidMount)
+update: render, componentDidUpdate
+unmount: componentWillUnmount
+
+props&state:
+props: read only
