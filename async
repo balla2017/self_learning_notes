@@ -1,0 +1,37 @@
+
+
+gmo starComliance
+http://gmocentral/
+increse automatically:
+https://docs.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-ranges
+
+
+https://docs.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-events#remove-an-event-handler
+https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Excel
+https://github.com/officedev
+https://docs.microsoft.com/en-us/office/dev/add-ins/develop/asynchronous-programming-in-office-add-ins
+https://docs.microsoft.com/en-us/office/dev/add-ins/design/content-add-ins
+
+https://github.com/leisurelicht/wtfpython-cn
+
+content add-ins:
+https://www.add-in-express.com/creating-addins-blog/2012/12/07/create-excel-content-pane-apps/
+https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance
+
+async:
+https://docs.microsoft.com/en-us/office/dev/add-ins/develop/asynchronous-programming-in-office-add-ins
+async function myFunction() {
+  try {
+    await somethingThatReturnsAPromise();
+  } catch (err) {
+    console.log(err);
+  }
+}
+多个请求并发，可以使用promise.all
+async function dbFunc（dn）
+{
+  let docs=[{},{},{}];
+  let promises=docs.map((doc)=>db.post(doc));
+  let results=await Promise.all(promises);
+  console.log(results);
+}
