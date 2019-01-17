@@ -40,3 +40,15 @@ http://www.ruanyifeng.com/blog/2015/05/async.html
 
 异步：
 函数嵌套， promise and async+await
+promise三种返回状态：
+fulfilled, rejected, resolved(前两个加在一起)
+var promise = new Promise(function (resolve, reject) {
+  // ...
+
+  if (/* 异步操作成功 */){
+    resolve(value);
+  } else { /* 异步操作失败 */
+    reject(new Error());
+  }
+});
+http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html
