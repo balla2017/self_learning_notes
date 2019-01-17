@@ -35,3 +35,8 @@ async function dbFunc（dn）
   let results=await Promise.all(promises);
   console.log(results);
 }
+
+http://www.ruanyifeng.com/blog/2015/05/async.html
+
+异步：
+函数嵌套， promise and async+await
