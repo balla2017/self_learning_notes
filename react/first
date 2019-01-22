@@ -28,3 +28,178 @@ unmount: componentWillUnmount
 
 props&state:
 props: read only
+
+
+gmo starComliance
+http://gmocentral/
+increse automatically:
+https://docs.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-ranges
+
+https://docs.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-events#remove-an-event-handler
+https://developer.microsoft.com/en-us/office/gallery/?filterBy=Samples,Excel
+https://github.com/officedev
+https://docs.microsoft.com/en-us/office/dev/add-ins/develop/asynchronous-programming-in-office-add-ins
+https://docs.microsoft.com/en-us/office/dev/add-ins/design/content-add-ins
+
+https://github.com/leisurelicht/wtfpython-cn
+
+content add-ins:
+https://www.add-in-express.com/creating-addins-blog/2012/12/07/create-excel-content-pane-apps/
+https://github.com/OfficeDev/Excel-Content-Add-in-Humongous-Insurance
+https://www.add-in-express.com/creating-addins-blog/2012/08/30/ux-guidelines-office2013-content-task-pane-apps/
+
+async:
+https://docs.microsoft.com/en-us/office/dev/add-ins/develop/asynchronous-programming-in-office-add-ins
+async function myFunction() {
+  try {
+    await somethingThatReturnsAPromise();
+  } catch (err) {
+    console.log(err);
+  }
+}
+??????,????promise.all
+async function dbFunc(dn)
+{
+  let docs=[{},{},{}];
+  let promises=docs.map((doc)=>db.post(doc));
+  let results=await Promise.all(promises);
+  console.log(results);
+}
+
+1.reactjs
+https://www.youtube.com/watch?v=DLX62G4lc44
+2.
+Redux Crash Course With React
+https://www.youtube.com/watch?v=93p3LxR9xfM
+3.express
+https://www.youtube.com/watch?v=pKd0Rpw7O48
+4.chat online
+https://www.youtube.com/watch?v=jDae-hLjubU&list=PLFaW_8zE4amPaLyz5AyVT8B_wfOYwd8x8
+5.网易云音乐
+https://github.com/chenjun1127/react-music
+6.个人博客
+https://www.jianshu.com/p/3ed54d305d8e
+7.安卓云音乐
+http://www.ixuea.com/sections/1725
+8.深入浅出
+
+fetch("http://mapsdevapi/api/v1/MapsData/GetStatus")
+  .then(res => res.json())
+  .then(out => {
+    console.log("Output: ", out);
+  })
+  .catch(err => console.error(err));
+
+const fetch = require("node-fetch");
+
+fetch("http://mapsdevapi/api/v1/MapsData/GetStatus")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    var singleID = myJson.map(item => [item.id]);
+    console.log(singleID);
+  });
+
+{
+"id":1768,
+"requestId":"d69b6d2c-4fba-494d-86ff-c6d9a7351588",
+"productName":"DASHBOARD",
+"requestType":"FETCH",
+"requestor":"pmajgaon",
+"requestStatus":"Dequeued",
+"responseStatus":"Success",
+"responseMessage":"Completed simulations",
+"server":"BEDDEVMAP002",
+"requestedOn":"2019-01-22T15:03:19.65Z",
+"startTime":"2019-01-22T15:03:20.43Z",
+"lastUpdated":"2019-01-22T15:03:24.917Z",
+"elapsedTime":4487.0,
+"percentComplete":0.0,
+"outputLocation":"\\\\gmo\\quant_organic\\AAQuant\\research\\MAPS-DEV\\20190122\\1768\\"
+}
+
+fetch("http://mapsdevapi/api/v1/MapsData/GetStatus")
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(myJson) {
+            var singleItem = myJson.map(item => [
+              item.id,
+              item.productName,
+              item.requestType,
+              item.requestor,
+              item.responseStatus,
+              item.server,
+              item.requestedOn,
+              item.startTime,
+              item.elapsedTime,
+              item.percentComplete,
+              item.outputLocation
+            ]);
+            getStatusTable.rows.add(null, singleItem);
+          });
+
+"ID", "Product_Name", "Type", "User", "Response_Status", "Server", "Request_Start", "Start_Time", "Elapsed_Time", "Percent_Complete", "Output_Location"
+
+
+        expensesTable.rows.add(null /*add rows to the end of the table*/, [
+          ["1/1/2017", "The Phone Company", "Communications", "$120"],
+          ["1/2/2017", "Northwind Electric Cars", "Transportation", "$142"],
+          ["1/5/2017", "Best For You Organics Company", "Groceries", "$27"],
+          ["1/10/2017", "Coho Vineyard", "Restaurant", "$33"],
+          ["1/11/2017", "Bellows College", "Education", "$350"],
+          ["1/15/2017", "Trey Research", "Other", "$135"],
+          ["1/15/2017", "Best For You Organics Company", "Groceries", "$97"]
+        ]);
+
+function getStatus() {
+      Excel.run(function(context) {
+        var sheet = context.workbook.worksheets.getItem("Sheet1");
+        var getStatusTable = sheet.tables.add("A1:K1", true /*hasHeaders*/);
+        getStatusTable.name = "getStatusTable";
+
+        getStatusTable.getHeaderRowRange().values = [
+          [
+            "ID",
+            "Product_Name",
+            "Type",
+            "User",
+            "Response_Status",
+            "Server",
+            "Request_Start",
+            "Start_Time",
+            "Elapsed_Time",
+            "Percent_Complete",
+            "Output_Location"
+          ]
+        ];
+        return context.sync();
+      }).catch(errorHandlerFunction);
+    }
+
+ context.sync().then(() => {
+          fetch("http://mapsdevapi/api/v1/MapsData/GetStatus")
+            .then(function(response) {
+              return response.json();
+            })
+            .then(function(myJson) {
+              var singleItem = myJson.map(item => [
+                item.id,
+                item.productName,
+                item.requestType,
+                item.requestor,
+                item.responseStatus,
+                item.server,
+                item.requestedOn,
+                item.startTime,
+                item.elapsedTime,
+                item.percentComplete,
+                item.outputLocation
+              ]);
+              getStatusTable.rows.add(null, singleItem);
+            })
+            .catch(errorHandlerFunction);
+        });
+
+http://zetcode.com/articles/javascriptjsonurl/
