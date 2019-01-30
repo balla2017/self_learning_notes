@@ -1,1 +1,78 @@
+http://www.ruanyifeng.com/blog/2015/03/react.html
+https://github.com/ruanyf/react-demos#demo12-display-value-from-a-promise
+凡是使用到jsx的地方要加上， type="text/babel"
+ReactDOM.render()
+用于将js转换成html部分，并插入到指定的DOM
+
+this.props: 一旦定义就不再改变（用户与组件的互动不属于）
+this.props.children(获取当前组件子节点)
+-无：undefined
+-一个：object
+-1+: array
+getDefaultProps:用来设置默认值
+
+获取真实的DOM节点：
+this.ref.[refName]
+
+this.state：随着用户的行为而改变
+getInitialState:获取初始状态
+状态变化，this.setState修改状态值，修改后自动调用render()自动渲染组件
+
+组件生命周期：
+mounting: 已插入真实DOM
+updating：正在被重新渲染
+unmounting: 已移出真实DOM
+will在函数进入状态前调用， did在函数进入状态后
+
+改变透明度：
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../build/react.development.js"></script>
+    <script src="../build/react-dom.development.js"></script>
+    <script src="../build/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      class Hello extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = {
+            opacity: 1.0
+          };
+        }
+        componentDidMount() {
+          this.timer = setInterval(function () {
+            var opacity = this.state.opacity;
+            opacity -= .05;
+            if (opacity < 0.1) {
+              opacity = 1.0;
+            }
+            this.setState({
+              opacity: opacity
+            });
+          }.bind(this), 100);
+        }
+        render() {
+          return (
+            <div style={{opacity: this.state.opacity}}>
+              Hello {this.props.name}
+            </div>
+          );
+        }
+      }
+        
+      ReactDOM.render(
+        <Hello name="world"/>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
+
+Ajax:
+AJAX应用可以仅向伺服器发送并取回必須的数据，并在客户端采用JavaScript处理来自伺服器的回應。因为在伺服器和浏览器之间交换的数据大量减少，伺服器回應更快了。同时，很多的处理工作可以在发出请求的客户端机器上完成，因此Web伺服器的负荷也减少了。
+组件的数据来源，通常是通过 Ajax 请求从服务器获取
 
