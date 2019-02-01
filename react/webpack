@@ -15,3 +15,14 @@ Babel-loader可以JSX / ES6文件转换成标准JS文件,之后Webpack将开始�
 css-loader:
 Webpack允许你在JS文件中包含CSS，然后用CSS-loader来预处理CSS文件
 
+css module:
+:global(selector)
+
+Webpack has a plugin system to expand its functions. For example, UglifyJs Plugin will minify output(bundle.js) JS codes.
+
+Code splitting
+require.ensure tells Webpack that ./a.js should be separated from bundle.js and built into a single chunk file.
+require('bundle-loader!./a.js') tells Webpack to load a.js from another chunk.
+
+You should use ProvidePlugin (Official doc) which automatically loads modules instead of having to import or require them everywhere.
+global variable:
