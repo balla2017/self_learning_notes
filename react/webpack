@@ -1,1 +1,17 @@
+https://www.jianshu.com/p/080e18fcf0e3
+https://github.com/ruanyf/webpack-demos#demo01-entry-file-source
+webpack:
+Webpack的工作方式是：把你的项目当做一个整体，通过一个给定的主文件（如：index.js），Webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包为一个（或多个）浏览器可识别的JavaScript文件
+Webpack is a front-end tool to build JavaScript module scripts for browsers.
+
+webpack.config.js:
+entry,output,在package.json中添加配置
+
+多个开始文件，在entry里面key-value（bundle-js）形式加入
+
+Babel-loader:
+Babel-loader可以JSX / ES6文件转换成标准JS文件,之后Webpack将开始构建这些JS文件。
+
+css-loader:
+Webpack允许你在JS文件中包含CSS，然后用CSS-loader来预处理CSS文件
 
