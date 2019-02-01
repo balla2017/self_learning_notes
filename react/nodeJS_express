@@ -1,1 +1,36 @@
+node 概述
+http://javascript.ruanyifeng.com/nodejs/basic.html
+Node是JavaScript语言的服务器运行环境
+所谓“运行环境”有两层意思：首先，JavaScript语言通过Node在服务器运行，在这个意义上，Node有点像JavaScript虚拟机；
+其次，Node提供大量工具库，使得JavaScript语言与操作系统互动（比如读写文件、新建子进程），在这个意义上，Node又是JavaScript的工具库。
 
+异步操作：
+Node采用V8引擎处理JavaScript脚本，最大特点就是单线程运行，一次只能运行一个任务。这导致Node大量采用异步操作（asynchronous operation），即任务不是马上执行，而是插在任务队列的尾部，等到前面的任务运行完后再执行。
+Node约定，如果某个函数需要回调函数作为参数，则回调函数是最后一个参数。另外，回调函数本身的第一个参数，约定为上一步传入的错误对象
+__filename：指向当前运行的脚本文件名。
+__dirname：指向当前运行的脚本所在的目录。
+
+用require加载模块
+核心模块：
+http：提供HTTP服务器功能。
+url：解析URL。
+fs：与文件系统交互。
+querystring：解析URL的查询字符串。
+child_process：新建子进程。
+util：提供一系列实用小工具。
+path：处理文件路径。
+crypto：提供加密和解密功能，基本上是对OpenSSL的包装。
+上面这些核心模块，源码都在Node的lib子目录中。为了提高运行速度，它们安装时都会被编译成二进制文件。
+自定义模块：
+module.exports=function
+{
+};
+module变量是整个模块文件的顶层变量，它的exports属性就是模块向外输出的接口。如果直接输出一个函数（就像上面的foo.js），那么调用模块就是调用一个函数。但是，模块也可以输出一个对象
+
+异常处理：
+-try-catch(无法捕捉异步操作的error）
+-回调函数
+-EventEmitter接口的error事件
+当一个异常未被捕获，就会触发uncaughtException事件，可以对这个事件注册回调函数，从而捕获异常。
+只要给uncaughtException配置了回调，Node进程不会异常退出，但异常发生的上下文已经丢失，无法给出异常发生的详细信息。而且，异常可能导致Node不能正常进行内存回收，出现内存泄露。所以，当uncaughtException触发后，最好记录错误日志，然后结束Node进程。
+unhandledRejection事件
