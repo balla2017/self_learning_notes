@@ -4,3 +4,22 @@ Node：
 https://github.com/ruanyf/jstraining/blob/master/docs/node.md
 Express:
 http://javascript.ruanyifeng.com/nodejs/express.html
+
+REST API
+REST（REpresentational State Transfer） 是浏览器与服务器通信方式的一种设计风格
+Resource：资源
+Representation：表现层
+State：状态
+Transfer：转换
+互联网上所有可以访问的内容，都是资源。
+服务器保存资源，客户端请求资源。
+同一个资源，有多种表现形式。
+协议本身不带有状态，通信时客户端必须通过参数，表示请求不同状态的资源。
+状态转换通过HTTP动词表示。
+中间件：对 HTTP 请求进行加工
+
+Express框架等于在http模块之上，加了一个中间层。
+中间件（middleware）就是处理HTTP请求的函数。它最大的特点就是，一个中间件处理完，再传递给下一个中间件。App实例在运行过程中，会调用一系列的中间件
+每个中间件可以从App实例，接收三个参数，依次为request对象（代表HTTP请求）、response对象（代表HTTP回应），next回调函数（代表下一个中间件）。每个中间件都可以对HTTP请求（request对象）进行加工，并且决定是否调用next方法，将request对象再传给下一个中间件。
+use是express注册中间件的方法，它返回一个函数。
+如果在模式参数后面加上问号，表示该参数可选。
