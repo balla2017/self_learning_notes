@@ -1,0 +1,12 @@
+https://github.com/ruanyf/jstraining/blob/master/docs/history.md
+experiment:
+https://github.com/ruanyf/jstraining/blob/master/demos/README.md#simple-app
+前端：针对浏览器的开发，代码在浏览器运行
+后端：针对服务器的开发，代码在服务器运行
+
+通过 URL 切换视图，这就是 Router（路由）的作用
+
+MVC模式->mv模式->MVVM模式(本质：view 绑定 view-model，视图与数据模型强耦合。数据的变化实时反映在 view 上，不需要手动处理)->SPA(single page application)
+
+Node = JavaScript + 操作系统 API
+
