@@ -1,5 +1,9 @@
 http://www.ruanyifeng.com/blog/2015/03/react.html
 https://github.com/ruanyf/react-demos#demo12-display-value-from-a-promise
+JavaScript 引擎（包括浏览器和 Node）都不认识 JSX，需要首先使用 Babel 转码，然后才能运行
+React 需要加载两个库：React 和 React-DOM，前者是 React 的核心库，后者是 React 的 DOM 适配库。
+Babel 用来在浏览器转换 JSX 语法，如果服务器已经转好了，浏览器就不需要加载这个库。
+
 凡是使用到jsx的地方要加上， type="text/babel"
 ReactDOM.render()
 用于将js转换成html部分，并插入到指定的DOM
