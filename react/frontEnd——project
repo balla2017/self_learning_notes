@@ -1,0 +1,15 @@
+https://github.com/ruanyf/jstraining/blob/master/docs/engineering.md
+持续集成流程
+-本地开发（developing）
+-静态代码检查（linting）
+-单元测试（testing）
+-合并进入主干（merging）
+-自动构建（building）
+-自动发布（publishing）
+
+单元测试（unit testing）
+功能测试（feature testing）
+集成测试（integration testing）
+端对端测试 (End-to-End testing）
+
+持续集成服务平台（Paas）
