@@ -3,6 +3,10 @@ https://github.com/ruanyf/react-demos#demo12-display-value-from-a-promise
 JavaScript 引擎（包括浏览器和 Node）都不认识 JSX，需要首先使用 Babel 转码，然后才能运行
 React 需要加载两个库：React 和 React-DOM，前者是 React 的核心库，后者是 React 的 DOM 适配库。
 Babel 用来在浏览器转换 JSX 语法，如果服务器已经转好了，浏览器就不需要加载这个库。
+核心思想： View 是 State 的输出。
+架构：大型应用程序应该如何组织代码
+通信：组件之间如何通信
+React 同步状态的基本方法：找到通信双方最近的共同父组件，通过它的state，使得子组件的状态保持同步。
 
 凡是使用到jsx的地方要加上， type="text/babel"
 ReactDOM.render()
@@ -80,3 +84,32 @@ Ajax:
 AJAX应用可以仅向伺服器发送并取回必須的数据，并在客户端采用JavaScript处理来自伺服器的回應。因为在伺服器和浏览器之间交换的数据大量减少，伺服器回應更快了。同时，很多的处理工作可以在发出请求的客户端机器上完成，因此Web伺服器的负荷也减少了。
 组件的数据来源，通常是通过 Ajax 请求从服务器获取
 
+Flux架构：
+最大特点：数据单向流动。与 MVVM 的数据双向绑定，形成鲜明对比。
+action->dispatcher->store->view
+核心思想：
+不同组件的state，存放在一个外部的、公共的 Store 上面。
+组件订阅 Store 的不同部分。
+组件发送（dispatch）动作（action），引发 Store 的更新。
+
+Redux 架构
+核心思想：
+-有的状态存放在Store。组件每次重新渲染，都必须由状态变化引起。
+-用户在 UI 上发出action。
+-reducer函数接收action，然后根据当前的state，计算出新的state。
+dispatch({action},{current state})->reducer->new state(store)
+-Redux 将组件分成 UI 组件和容器组件两类。
+-UI 组件是纯组件，不包含 state 和生命周期方法，不涉及组件的行为，只涉及组件的外观。
+容器组件：
+-不涉及组件的外观，只涉及组件的行为。
+-负责订阅 Store，将 Store 的数据处理以后，再通过参数传给 UI 组件。
+-用户给出配置以后，由 Redux 生成。
+
+cons：
+-UI 组件与后台数据无关，可以由设计师负责
+-容器组件只负责数据和行为，一旦 Store 的数据结构变化，只要调整容器组件即可
+-表现层和功能层脱钩，有利于代码重用，也有利于看清应用的数据结构和业务逻辑
+
+reducer是一个纯函数，用来接收action，算出新的state。
+-Store由 Redux 提供的createStore方法生成，该方法接受reducer作为参数。
+-为了把Store传入组件，必须使用 Redux 提供的Provider组件在应用的最外面，包裹一层。
