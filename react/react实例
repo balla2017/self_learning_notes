@@ -44,6 +44,8 @@ this.state：随着用户的行为而改变
 getInitialState:获取初始状态
 状态变化，this.setState修改状态值，修改后自动调用render()自动渲染组件
 
+this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。
+
 组件生命周期：
 mounting: 已插入真实DOM
 updating：正在被重新渲染
