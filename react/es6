@@ -39,3 +39,5 @@ obj{
 ...name: take these and pack them to array
 8.Template  ` literals `
 展示出换行
+let des =`
+  haha`;
