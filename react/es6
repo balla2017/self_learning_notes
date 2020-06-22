@@ -24,3 +24,4 @@ var functionName =paramter=>{
 4. arrow&this
 this: window object
 this refers to what called this object
+the fat arrow keeps its context, like this to global window
