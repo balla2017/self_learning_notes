@@ -41,3 +41,15 @@ obj{
 展示出换行
 let des =`
   haha ${ref}`;
+9.Destructing arrays[ ] with default parameters
+let numbers=[1,2,3]
+let [a,b]=numbers;
+a:1
+b:2
+10.Destructing {Objects} with alias
+let obj={
+  name: "",
+  age: 27
+}
+
+let {name,age}=obj;
