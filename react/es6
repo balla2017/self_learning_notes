@@ -16,3 +16,7 @@ var functionName =(paramters)=>{
 };
 one line function:
 var fnc=()=>'Hello';
+//only one argument
+var functionName =paramter=>{
+  function body;
+};
