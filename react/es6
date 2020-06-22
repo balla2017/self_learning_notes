@@ -35,5 +35,5 @@ let a="age";
 obj{
   [a]:28,
 };
-7.rest..operator
+7.rest..operator&Spread ... operator 
 ...name: take these and pack them to array
