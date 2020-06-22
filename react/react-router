@@ -46,3 +46,5 @@ IndexRoute 组件
 </Router>
 这种组件结构就很清晰了：App只包含下级组件的共有元素，本身的展示内容则由Home组件定义。这样有利于代码分离，也有利于使用React Router提供的各种API。
 注意，IndexRoute组件没有路径参数path
+
+Redict,Link(a)
