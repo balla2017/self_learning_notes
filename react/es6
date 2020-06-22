@@ -35,3 +35,4 @@ let a="age";
 obj{
   [a]:28,
 };
+7.rest..operator
