@@ -11,3 +11,6 @@ Symbol.prototype.description
 属性名的遍历
 但是，它也不是私有属性，有一个Object.getOwnPropertySymbols()方法，可以获取指定对象的所有 Symbol 属性名。该方法返回一个数组，成员是当前对象的所有用作属性名的 Symbol 值。
 3.arrow function
+var functionName =(paramters)=>{
+  function body;
+};
