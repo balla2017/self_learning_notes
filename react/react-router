@@ -1,1 +1,9 @@
 http://www.ruanyifeng.com/blog/2016/05/react_router.html
+import { Router, Route, hashHistory } from 'react-router';
+
+render((
+  <Router history={hashHistory}>
+    <Route path="/" component={App}/>
+  </Router>
+), document.getElementById('app'));
+你可能还注意到，Router组件有一个参数history，它的值hashHistory表示，路由的切换由URL的hash变化决定，即URL的#部分发生变化。
