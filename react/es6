@@ -1,4 +1,5 @@
 https://es6.ruanyifeng.com/#docs/symbol
+https://www.youtube.com/watch?v=IEf1KAcK6A8
 1. let&const
 ES6 规定，块级作用域之中，函数声明语句的行为类似于let，在块级作用域之外不可引用。
 const声明的变量不得改变值，这意味着，const一旦声明变量，就必须立即初始化，不能留到以后赋值。
@@ -25,3 +26,4 @@ var functionName =paramter=>{
 this: window object
 this refers to what called this object
 the fat arrow keeps its context, like this to global window
+5. default parameters
