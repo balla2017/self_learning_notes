@@ -29,3 +29,4 @@ the fat arrow keeps its context, like this to global window
 5. default parameters
 when pass to, cannot ignore
 6.Object literals short hand
+create properties dynamically with names stored in variables
