@@ -35,3 +35,14 @@ render((
 （4） **
 ** 匹配任意字符，直到下一个/、?、#为止。匹配方式是贪婪模式。
 带参数的路径一般要写在路由规则的底部。
+
+IndexRoute 组件
+<Router>
+  <Route path="/" component={App}>
+    <IndexRoute component={Home}/>
+    <Route path="accounts" component={Accounts}/>
+    <Route path="statements" component={Statements}/>
+  </Route>
+</Router>
+这种组件结构就很清晰了：App只包含下级组件的共有元素，本身的展示内容则由Home组件定义。这样有利于代码分离，也有利于使用React Router提供的各种API。
+注意，IndexRoute组件没有路径参数path
