@@ -20,3 +20,4 @@ var fnc=()=>'Hello';
 var functionName =paramter=>{
   function body;
 };
+()=>sentence
