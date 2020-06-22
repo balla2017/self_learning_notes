@@ -48,3 +48,5 @@ IndexRoute 组件
 注意，IndexRoute组件没有路径参数path
 
 Redict,Link(a)
+如果链接到根路由/，不要使用Link组件，而要使用IndexLink组件。
+这是因为对于根路由来说，activeStyle和activeClassName会失效，或者说总是生效，因为/会匹配任何子路由。而IndexLink组件会使用路径的精确匹配。
