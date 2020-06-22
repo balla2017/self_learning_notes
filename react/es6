@@ -23,3 +23,4 @@ var functionName =paramter=>{
 ()=>sentence
 4. arrow&this
 this: window object
+this refers to what called this object
