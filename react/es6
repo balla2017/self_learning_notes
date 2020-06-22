@@ -21,3 +21,4 @@ var functionName =paramter=>{
   function body;
 };
 ()=>sentence
+4. arrow&this
