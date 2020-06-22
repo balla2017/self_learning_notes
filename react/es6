@@ -54,4 +54,4 @@ let obj={
 }
 
 let {name,greet:hello}=obj;
-rename greet to hello
+rename greet to hello, which is the only name we can use outside
