@@ -62,3 +62,28 @@ render(
   <Router history={hashHistory} routes={routes} />,
   document.getElementById('app')
 )
+
+表单处理
+1.browserHistory.push
+import { browserHistory } from 'react-router'
+// ...
+  handleSubmit(event) {
+    event.preventDefault()
+    const userName = event.target.elements[0].value
+    const repo = event.target.elements[1].value
+    const path = `/repos/${userName}/${repo}`
+    browserHistory.push(path)
+  },
+2.第二种方法是使用context对象
+export default React.createClass({
+
+  // ask for `router` from context
+  contextTypes: {
+    router: React.PropTypes.object
+  },
+
+  handleSubmit(event) {
+    // ...
+    this.context.router.push(path)
+  },
+})
