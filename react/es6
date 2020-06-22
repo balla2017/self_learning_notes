@@ -14,3 +14,5 @@ Symbol.prototype.description
 var functionName =(paramters)=>{
   function body;
 };
+one line function:
+var fnc=()=>'Hello';
