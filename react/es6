@@ -40,4 +40,4 @@ obj{
 8.Template  ` literals `
 展示出换行
 let des =`
-  haha`;
+  haha ${ref}`;
