@@ -22,3 +22,4 @@ var functionName =paramter=>{
 };
 ()=>sentence
 4. arrow&this
+this: window object
