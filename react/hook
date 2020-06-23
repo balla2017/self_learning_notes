@@ -3,3 +3,52 @@ React Hooks 就是那些钩子。 你需要什么功能，就使用什么钩子�
 Hook顾名思义就是钩子的意思。在函数组件中把React的状态和生命周期等这些特性钩入进入，这就是React的Hook,那么 React Hooks 相比于从前的类组件到底有哪些好处呢？
 代码可读性更强，原本同一块功能的代码逻辑被拆分在了不同的生命周期函数中，容易使开发者不利于维护和迭代，通过 React Hooks 可以将功能代码聚合，方便阅读维护
 组件树层级变浅，在原本的代码中，我们经常使用 HOC/render props 等方式来复用组件的状态，增强功能等，无疑增加了组件树层数及渲染，而在 React Hooks 中，这些功能都可以通过强大的自定义的 Hooks 来实现
+
+-useState 保存组件状态
+以前的函数式组件被成为纯函数组件或者无状态组件，是只能接受父组件传来的props并且只能做展示功能，不能使用state也没有生命周期。
+现在State Hook 可以让函数式组件使用状态。
+useState是React的一个Hook，它是一个方法，可以传入值作为state的默认值，返回一个数组，数组的第一项是对应的状态(默认值会赋予状态)，数组的第二项是更新状态的函数
+import React, { useState } from "react";
+function App() {
+  const [countObj, setCountObj] = useState({
+    count: 0
+  });
+  return (
+    <div className="App">
+      Count: {obj.count}
+      <button onClick={() => setCountObj({ ...countObj, count: countObj.count + 1 })}>+</button>
+      <button onClick={() => setCountObj({ ...countObj, count: countObj.count - 1 })}>-</button>
+    </div>
+  );
+}
+-useEffect 处理副作用
+函数组件能保存状态，但是却无法执行异步请求等副作用的操作，所以 React 提供了 useEffect 来帮助开发者处理函数组件的副作用操作
+我们写的有状态组件，通常会产生很多的副作用（side effect），比如发起ajax请求获取数据，添加一些监听的注册和取消注册，手动修改dom等等。我们之前都把这些副作用的函数写在生命周期函数钩子里，比如componentDidMount，componentDidUpdate和componentWillUnmount。而现在的useEffect就相当与这些声明周期函数钩子的集合体。它以一抵三。
+import React, { useState, useEffect } from "react";
+let timer = null;
+function App() {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    document.title = "componentDidMount" + count;
+  },[count]);
+
+  useEffect(() => {
+    timer = setInterval(() => {
+      setCount(prevCount => prevCount + 1);
+    }, 1000);
+    return () => {
+      document.title = "componentWillUnmount";
+      clearInterval(timer);
+    };
+  }, []);
+  return (
+    <div>
+      Count: {count}
+      <button onClick={() => clearInterval(timer)}>clear</button>
+    </div>
+  );
+}
+useEffect 第一个参数传递函数，可以用来做一些副作用比如异步请求，修改外部参数等行为，而第二个参数是个数组，如果数组中的值才会触发 useEffect 第一个参数中的函数。返回值(如果有)则在组件销毁或者调用函数前调用。
+比如第一个 useEffect 中，理解起来就是一旦 count 值发生改变，则修改 documen.title 值
+而第二个 useEffect 中数组没有传值，代表不监听任何参数变化，即只有在组件初始化或销毁的时候才会触发，用来代替 componentDidMount 和 componentWillUnmount；
+
