@@ -1,7 +1,19 @@
-NR mobile:
--HTTP error
--3rd party services
--crash diagostic
--networks
--deployment trends
-errors in code level using Mobile
+Mobile
+gives you code-level visibility into networks, third-party services, crash diagnostics, HTTP errors, and deployment trends for your native mobile apps
+
+APM:
+gives you visibility into how your backend application is performing with detailed, real-time performance metrics down to specific lines of code
+
+Browser:
+gives you real user experience data and full code visibility for your front-end web applications
+
+Insights
+use to analyze your data from all other products by creating queries to answer questions about application performance and customers experience
+
+Synthetics
+make sure your website is up 
+make sure your critical services and customer-facing transactions are working properly
+simulate user behavior to validate performance of your application
+
+Infrausture
+gives you real-time health metrics for your hosts correlated to change events and Inventory-wide visibility for on-premise, hybrid, cloud, and container environments
