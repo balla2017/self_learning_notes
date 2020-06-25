@@ -3,6 +3,11 @@ gives you code-level visibility into networks, third-party services, crash diagn
 
 *APM:
 gives you visibility into how your backend application is performing with detailed, real-time performance metrics down to specific lines of code
+help you refactor
+APM agent sends performance data to NR per minute
+Dashboard show respond time, throughput, error rate.
+left columns:
+transaction, error analysis, databases?
 
 *Browser:
 gives you real user experience data and full code visibility for your front-end web applications
