@@ -16,6 +16,11 @@ can use health maps to monitor the health of your applications and hosts using A
 
 *Browser:
 gives you real user experience data and full code visibility for your front-end web applications
+Aim:
+-Real user monitor enables to understand and improve end-user experience
+-Use data collected by NR Browser to improve website performance
+-work with other NR products
+
 
 Insights
 use to analyze your data from all other products by creating queries to answer questions about application performance and customers experience
@@ -35,3 +40,4 @@ events: what happen before/after a problem occurred
 integrations:
 on cloud & host(redis, mySQL, kafka, rabbitMQ, kubernates)
 install cloudn : connect new relic account and cloud account
+
