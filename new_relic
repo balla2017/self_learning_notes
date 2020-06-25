@@ -1,10 +1,10 @@
 Mobile
 gives you code-level visibility into networks, third-party services, crash diagnostics, HTTP errors, and deployment trends for your native mobile apps
 
-APM:
+*APM:
 gives you visibility into how your backend application is performing with detailed, real-time performance metrics down to specific lines of code
 
-Browser:
+*Browser:
 gives you real user experience data and full code visibility for your front-end web applications
 
 Insights
@@ -15,5 +15,5 @@ make sure your website is up
 make sure your critical services and customer-facing transactions are working properly
 simulate user behavior to validate performance of your application
 
-Infrausture
+*Infrausture
 gives you real-time health metrics for your hosts correlated to change events and Inventory-wide visibility for on-premise, hybrid, cloud, and container environments
