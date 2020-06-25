@@ -25,5 +25,13 @@ make sure your website is up
 make sure your critical services and customer-facing transactions are working properly
 simulate user behavior to validate performance of your application
 
-*Infrausture
+*Infrausture(let you look at your host resource usage-locally or in the cloud)
+can help keep your cloud costs down by making it easier to identify opportunities to right size instances, fine tune databases, modify your storage usage, better configure load balancers and re-architect your applications.
 gives you real-time health metrics for your hosts correlated to change events and Inventory-wide visibility for on-premise, hybrid, cloud, and container environments
+CPU, memory used, load average
+top:
+inventory: make sure your hosts are running the correct packages.
+events: what happen before/after a problem occurred
+integrations:
+on cloud & host(redis, mySQL, kafka, rabbitMQ, kubernates)
+install cloudn : connect new relic account and cloud account
