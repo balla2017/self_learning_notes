@@ -20,6 +20,8 @@ Aim:
 -Real user monitor enables to understand and improve end-user experience
 -Use data collected by NR Browser to improve website performance
 -work with other NR products
+Throughput:
+how many users visit the page, broken out by the browser they are using.
 
 
 Insights
@@ -41,3 +43,4 @@ integrations:
 on cloud & host(redis, mySQL, kafka, rabbitMQ, kubernates)
 install cloudn : connect new relic account and cloud account
 
+NRQL
