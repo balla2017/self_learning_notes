@@ -44,3 +44,14 @@ on cloud & host(redis, mySQL, kafka, rabbitMQ, kubernates)
 install cloudn : connect new relic account and cloud account
 
 NRQL
+https://docs.newrelic.com/docs/query-data/nrql-new-relic-query-language/getting-started/introduction-nrql
+SELECT function(attribute) [AS 'label'][, ...] 
+  FROM data type
+  [WHERE attribute [comparison] [AND|OR ...]][AS 'label'][, ...]
+  [FACET attribute | function(attribute)]
+  [LIMIT number]
+  [SINCE time]
+  [UNTIL time]
+  [WITH TIMEZONE timezone]
+  [COMPARE WITH time]
+  [TIMESERIES time]
