@@ -55,3 +55,10 @@ SELECT function(attribute) [AS 'label'][, ...]
   [WITH TIMEZONE timezone]
   [COMPARE WITH time]
   [TIMESERIES time]
+
+Apdex value:
+Apdex threshold:
+<0.5T, satisfies
+(0.5T,4T], tolerating
+>4T, frustrating
+0.5s defauld, consider reality
