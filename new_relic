@@ -62,3 +62,8 @@ Apdex threshold:
 (0.5T,4T], tolerating
 >4T, frustrating
 0.5s defauld, consider reality
+
+Service maps:
+-understand and interupt connections
+-understand group nodes
+-find and view service maps
