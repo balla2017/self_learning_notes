@@ -37,6 +37,13 @@ obj{
 };
 7.rest..operator&Spread ... operator 
 ...name: take these and pack them to array
+spread:
+const newArray=[...oldArray,1,2];
+const newObject={...oldObejct,newProp:5};
+rest:
+function sortAgs(...args){
+   return args.sort();
+}
 8.Template  ` literals `
 展示出换行
 let des =`
@@ -68,3 +75,16 @@ import * as xx from ... (xx.yy)
 11. classes
 extends
 in constructor, you have to super(); to create constructor from its parent
+12. array.filter(el=>el===1);  (filter: every elements)
+13. deep copy&浅拷贝
+deep copy:
+create a new object and re-assign
+浅拷贝：
+copy reference
+14. map
+const number=[1,2,3];
+const doubleArray=number.map((number)=>{
+  return number*2;
+});
+15. js array function
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
