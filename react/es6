@@ -55,3 +55,16 @@ let obj={
 
 let {name,greet:hello}=obj;
 rename greet to hello, which is the only name we can use outside
+
+10. import&export
+export default ..
+(import时候名字不一致也可以)
+export const para=10;
+export const arrow function
+import {} from ...(import explicitly)
+import {xx as yy} from ..(rename)
+import * as xx from ... (xx.yy)
+
+11. classes
+extends
+in constructor, you have to super(); to create constructor from its parent
