@@ -9,7 +9,8 @@ entry,output,在package.json中添加配置
 
 多个开始文件，在entry里面key-value（bundle-js）形式加入
 
-Babel-loader:
+Babel-loader():
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Here are the main things Babel can do for you: Transform syntax.
 Babel-loader可以JSX / ES6文件转换成标准JS文件,之后Webpack将开始构建这些JS文件。
 
 css-loader:
