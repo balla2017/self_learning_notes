@@ -35,3 +35,4 @@ setState: change the property
 -inline css:
 const style={};
 style={style}
+-{}可插入javascript
