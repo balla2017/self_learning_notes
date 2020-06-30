@@ -8,3 +8,23 @@ class-based components (also referred to as "containers", "smart" or "stateful" 
 
 -props.children
 any content between </>
+
+-state
+Whilst props allow you to pass data down the component tree (and hence trigger an UI update), state is used to change the component, well, state from within. Changes to state also trigger an UI update.
+class NewPost extends Component { // state can only be accessed in class-based components!
+    state = {
+        counter: 1
+    };  
+ 
+    render () { // Needs to be implemented in class-based components! Needs to return some JSX!
+        return (
+            <div>{this.state.counter}</div>
+        );
+    }
+}
+change state: this.setState
+hook: useState
+const [state, setState]=useState({
+   xxx;
+});
+setState: change the property
