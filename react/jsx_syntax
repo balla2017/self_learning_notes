@@ -5,3 +5,6 @@ class-based components (also referred to as "containers", "smart" or "stateful" 
 
 -props
 作为参数，props.xx
+
+-props.children
+any content between </>
