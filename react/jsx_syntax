@@ -30,3 +30,4 @@ const [state, setState]=useState({
 setState: change the property
 
 -container: stateless/dumb/presentational components vs smart/stateful components
+-onClick里面可以直接加arrow function传参数 or .bind(this,parameter)
