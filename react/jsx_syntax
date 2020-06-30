@@ -36,3 +36,4 @@ setState: change the property
 const style={};
 style={style}
 -{}可插入javascript
+-use map to render list of html items
