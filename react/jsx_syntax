@@ -29,4 +29,4 @@ const [state, setState]=useState({
 });
 setState: change the property
 
--container: stateless components vs smart/stateful components
+-container: stateless/dumb/presentational components vs smart/stateful components
