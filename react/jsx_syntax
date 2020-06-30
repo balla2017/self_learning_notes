@@ -38,3 +38,4 @@ style={style}
 -{}可插入javascript
 -use map to render list of html items
 -update state immutable
+-react list need a key
