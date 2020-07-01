@@ -12,5 +12,7 @@ export default Radium(xx)
 style[':.hover']={};
 ':.hover':{}
 'psu css name(@media...)':{}
+@media:
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
 import Raduim, {RootStyle} from raduim
 <RootStyle/> in your App
