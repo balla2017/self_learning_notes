@@ -12,3 +12,5 @@ export default Radium(xx)
 style[':.hover']={};
 ':.hover':{}
 'psu css name(@media...)':{}
+import Raduim, {RootStyle} from raduim
+<RootStyle/> in your App
