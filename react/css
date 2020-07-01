@@ -11,3 +11,4 @@ npm i --save radium
 export default Radium(xx)
 style[':.hover']={};
 ':.hover':{}
+'psu css name':{}
