@@ -1,3 +1,8 @@
 create style object
 const style={};
 style.property=;
+-dynamically assigned to className
+const style=[];
+style.push('css class name');
+usage:
+{className=style.join(' ')}
