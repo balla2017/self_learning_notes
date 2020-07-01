@@ -1,1 +1,3 @@
-
+create style object
+const style={};
+style.property=;
