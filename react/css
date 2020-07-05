@@ -18,3 +18,4 @@ import Raduim, {RootStyle} from raduim
 <RootStyle/> in your App
 -import xx from '/xx.css'
 className={xx.property}
+It's not using magic for that, instead it'll simply automatically generate unique CSS class names for you. And by importing a JS object and assigning classes from there, you use these dynamically generated, unique names. So the imported JS object simply exposes some properties which hold the generated CSS class names as values.
