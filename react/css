@@ -16,3 +16,5 @@ style[':.hover']={};
 https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
 import Raduim, {RootStyle} from raduim
 <RootStyle/> in your App
+-import xx from '/xx.css'
+className={xx.property}
