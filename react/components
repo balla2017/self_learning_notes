@@ -1,1 +1,5 @@
-
+<Component/
+  property
+>
+component.jsx:
+props.xxx
