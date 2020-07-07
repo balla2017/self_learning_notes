@@ -3,3 +3,6 @@
 >
 component.jsx:
 props.xxx
+
+stateful/container component:
+useState to manage the state
