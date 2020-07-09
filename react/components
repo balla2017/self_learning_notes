@@ -7,7 +7,7 @@ props.xxx
 stateful/container component:
 useState to manage the state
 
-class component: 
+class component(props is accessible by this.props): 
 class xx extends yy
 has component lifecycle
 1. constructor:
@@ -23,8 +23,8 @@ const XY=props=>{};
 
 component lifecycle update
 1. getDerivedStateFromProps(props, state)
-2. shouldComponentUpdate(nextProps, nextState) (decide continue or not)
+2. shouldComponentUpdate(nextProps, nextState) (decide continue or not), return true/false
 3. render()
 4. update child component props
-5. getSnapshotBeforeUpdate(prevProps, preState): last min DOM ops, scroll the user back
-6. componentDidUpdate(), http request, do not update the state
+5. getSnapshotBeforeUpdate(prevProps, preState): last min DOM ops, scroll the user back, return null if possible
+6. componentDidUpdate(prevProps, preState, snapshot), http request, do not update the state, may cause the re-render cycle
