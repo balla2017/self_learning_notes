@@ -11,7 +11,8 @@ class component:
 class xx extends yy
 has component lifecycle
 1. constructor:
-set initial state
+set initial state， this.state=xx;
+cannot setState.
 no: send http request, store in your local storage(may cause re-render)
 2. getDerivedStateFromProps(props, state)
 3. render(no timer and http request)
