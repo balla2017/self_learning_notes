@@ -20,3 +20,11 @@ no: send http request, store in your local storage(may cause re-render)
 5. 
 functional component(lifecycle hooks, no):
 const XY=props=>{};
+
+component lifecycle update
+1. getDerivedStateFromProps(props, state)
+2. shouldComponentUpdate(nextProps, nextState) (decide continue or not)
+3. render()
+4. update child component props
+5. getSnapshotBeforeUpdate(prevProps, preState): last min DOM ops, scroll the user back
+6. componentDidUpdate(), http request, do not update the state
