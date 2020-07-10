@@ -24,6 +24,8 @@ const XY=props=>{};
 component lifecycle update
 1. getDerivedStateFromProps(props, state)
 2. shouldComponentUpdate(nextProps, nextState) (decide continue or not), return true/false
+check if nextProps & this.props the same, diff return true;
+compare the pointer in memory
 3. render()
 4. update child component props
 5. getSnapshotBeforeUpdate(prevProps, preState): last min DOM ops, scroll the user back, return null if possible
@@ -32,3 +34,16 @@ component lifecycle update
 Improve performance:
 componentDidUpdate
 componentDidMount
+
+functional components' hook
+-useEffect, run every render cycle, http request can put in here
+useEffect(()=>{
+  do sth;
+  return xx;
+},[sth]);
+when sth changed, it will execute.
+sth is empty, it will run at the beginning, never re-run.
+return will run when run the last time.(clean up work)
+no sth, every time 
+
+change value, create a new object and ref
