@@ -28,3 +28,7 @@ component lifecycle update
 4. update child component props
 5. getSnapshotBeforeUpdate(prevProps, preState): last min DOM ops, scroll the user back, return null if possible
 6. componentDidUpdate(prevProps, preState, snapshot), http request, do not update the state, may cause the re-render cycle
+
+Improve performance:
+componentDidUpdate
+componentDidMount
