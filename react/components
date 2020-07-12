@@ -48,3 +48,4 @@ return will run when run the last time.(clean up work)
 no sth, every time 
 
 change value, create a new object and ref
+pureComponent instead of component
