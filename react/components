@@ -34,6 +34,7 @@ compare the pointer in memory
 Improve performance:
 componentDidUpdate
 componentDidMount
+export xx React.memo(xx); compare stored component in memory 
 
 functional components' hook
 -useEffect, run every render cycle, http request can put in here
