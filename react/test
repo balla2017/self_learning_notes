@@ -1,7 +1,17 @@
 //
 jest
-enzyme(by airbnb): 
+enzyme(by airbnb): do isolated test
 don't test the library
 don't test too complex connections
 test isolated unit, test your conditional outputs
 describe() define your test output
+describe("", function()=>{
+  it("description",function()=>(){
+    testing logic;
+  })
+}
+)
+
+shallow(component);
+wrapper.setProps({property,value})
+test according to external change
