@@ -1,3 +1,6 @@
 //
 jest
 enzyme(by airbnb): 
+don't test the library
+don't test too complex connections
+test isolated unit, test your conditional outputs
