@@ -1,0 +1,3 @@
+https://www.tutorialspoint.com/apache_kafka/apache_kafka_workflow.htm
+Role of zookeeper:
+A critical dependency of Apache Kafka is Apache Zookeeper, which is a distributed configuration and synchronization service. Zookeeper serves as the coordination interface between the Kafka brokers and consumers. The Kafka servers share information via a Zookeeper cluster. Kafka stores basic metadata in Zookeeper such as information about topics, brokers, consumer offsets (queue readers) and so on.
